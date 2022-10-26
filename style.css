@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+	--Red: hsl(0, 78%, 62%);
+	--Cyan: hsl(180, 62%, 55%);
+	--Orange: hsl(34, 97%, 64%);
+	--Blue: hsl(212, 86%, 64%);
+
+	--h1: hsl(234, 12%, 34%);
+	--p: hsl(229, 6%, 66%);
+	--bg: hsl(0, 0%, 98%);
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body {
+	min-height: 100vh;
+
+	margin: 1.25rem 1.25rem 1.25rem 0;
+	padding: 1.25rem 1.25rem;
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--bg);
+
+}
+
+/*
+=========
+typography
+=========
+ */
+header {
+	margin: 1.25rem 0;
+	text-align: center;
+	max-width: 100%;
+
+}
+
+span {
+	font-size: 2.38rem;
+	font-weight: 200;
+	color: var(--h1);
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: var(--h1);
+	font-weight: 900;
+}
+
+p {
+	font-size: 1.1rem;
+	color: var(--p);
+	font-weight: 500;
+	margin: 1rem 0;
+}
+
+h2 {
+	color: var(--h1);
+}
+
+/*
+=========
+main
+=========
+ */
+main {
+	display: grid;
+	max-width: 100%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	margin: 5rem 10rem;
+	gap: 3.2rem;
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
+
+
+}
+
+main img {
+	float: right;
+	margin-top: 2rem;
+}
+
+.item {
+	box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
+	border-radius: .3125rem;
+	padding: 2rem;
+	background-color: #fff;
+
+}
+
+.item-1 {
+	border-top: 5px solid var(--Cyan);
+	transform: translateY(50%);
+
+}
+
+.item-2 {
+	border-top: 5px solid var(--Red);
+
+}
+
+.item-3 {
+	border-top: 5px solid var(--Orange);
+	grid-row: 2/3;
+	grid-column: 2/3;
+
+}
+
+.item-4 {
+	border-top: 5px solid var(--Blue);
+	grid-row: 1/2;
+	grid-column: 3/-1;
+	transform: translateY(50%);
+
+
+
+}
+
+/*
+=========
+hover effect
+=========
+ */
+
+.item-1 h2:hover {
+	color: var(--Cyan);
+
+}
+
+.item-2 h2:hover {
+	color: var(--Red);
+}
+
+.item-3 h2:hover {
+	color: var(--Orange);
+
+}
+
+.item-4 h2:hover {
+
+	color: var(--Blue);
+}
+
+/*
+=========
+media query
+=========
+ */
+@media (max-width:600px) {
+	main {
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 100%;
+		margin: auto;
+	}
+
+.item-1 {
+	transform: unset;
+}
+
+.item-4 {
+ transform: unset;
+}
+header{
+	text-align: center;
+	max-width: 400px;
+
+}
+
+h1 {
+	font-size: 1.5rem;
+}
+
+span {
+	font-size: 1.40rem;
+}
+
+p{
+	font-size: 1rem;
+
+}
+}
